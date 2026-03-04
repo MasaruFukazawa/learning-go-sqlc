@@ -1,4 +1,4 @@
-.PHONY: up down run generate sqlc-version
+.PHONY: up down run generate sqlc-version shell
 
 up:
 	docker compose up -d
@@ -14,3 +14,6 @@ sqlc-generate:
 
 sqlc-version:
 	docker compose run --rm app sqlc version
+
+shell:
+	docker compose run --rm app bash
